@@ -4,8 +4,9 @@ module.exports = {
     extend: {
       colors:{
         "primary": "#CED7D9",
-        "main-action": "#2F67BB",
-        "second-action": "#004C81",
+        "mainBlue": "#2F67BB",
+        "darkerBlue": "#004C81",
+        "hoverAffect": "#3BD7FA"
         
       }
       
