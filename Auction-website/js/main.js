@@ -8,10 +8,7 @@ toggelMenu.addEventListener('click', function(){
 
 const dropdownBtn = document.getElementById("dropdown-btn");
 const dropdownMenu = document.getElementById("dropdown-menu");
-console.log(dropdownBtn);
-console.log(dropdownMenu);
 dropdownBtn.addEventListener('click', function(){
-   console.log("I click btn");
    dropdownMenu.classList.toggle('hidden')
 })
 

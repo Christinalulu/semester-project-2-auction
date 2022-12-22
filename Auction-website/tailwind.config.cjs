@@ -7,7 +7,10 @@ module.exports = {
         "mainBlue": "#2F67BB",
         "darkerBlue": "#004C81",
         "hoverAffect": "#3BD7FA"
-        
+      },
+      fontFamily:{
+       poppins:"'poppins',sans-seri",
+       zenDots: "'zen Dots', sans-seri"
       }
       
     },

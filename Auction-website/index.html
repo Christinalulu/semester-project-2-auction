@@ -2,26 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Zen+Dots&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./js/main.js" defer></script>
     <title>WBid</title>
   </head>
-  <body>
+  <body class="font-poppins">
     <!-- Start here -->
-
     <!-- Nav bar starts here -->
-    <nav class="relative bg-primary shadow dark:bg-gray-800">
+    <nav class="relative bg-primary shadow ">
       <div class="container px-6 py-3 mx-auto">
-        <!-- TODO: Take the div in js file  -->
         <div
           class="flex flex-col md:flex-row md:justify-between md:items-center">
           <div class="flex items-center justify-between">
             <div class="flex items-center text-white">
               <a
-                class="text-2xl font-light text-white hover:text-darkerBlue "
-                href="index.html">WBid
+                class="text-2xl font-light text-white hover:text-darkerBlue"
+                href="index.html"
+                >WBid
               </a>
             </div>
             <div class="flex md:hidden">
@@ -103,8 +106,8 @@
             </strong>
           </h1>
           <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
-            Find your amazing product here on an online auction website. 
-            Sign Up for free and get 1000 credit to spend right away on your findings.
+            Find your amazing product here on an online auction website. Sign Up
+            for free and get 1000 credit to spend right away on your findings.
           </p>
           <div class="mt-8 flex flex-wrap gap-4 text-center">
             <!-- TODO: Button To Sign Up form -->
@@ -123,114 +126,191 @@
       </div>
     </section>
     <!--  hero banner end here -->
-    <!-- FIXME: Images to the products-->
-      <div class="relative overflow-hidden bg-white my-12">
-        <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-          <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-            <div class="sm:max-w-lg">
-              <h2 class="font text-4xl font-bold tracking-tight text-black sm:text-5xl">Auction online</h2>
-              <p class="mt-4 text-xl text-gray-500">A large selection of products for everyones eyes. Every election is a sort of advance auction sale of stolen goods.</p>
-            </div>
-            <div>
-              <div class="mt-10">
-                <!-- Decorative image grid -->
-                <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
-                  <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                    <div class="flex items-center space-x-6 lg:space-x-8">
-                      <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
+    <!-- Gallery section middel-->
+    <div class="relative overflow-hidden bg-white my-12">
+      <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+        <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+          <div class="sm:max-w-lg">
+            <h2
+              class="font text-4xl font-bold tracking-tight text-black sm:text-5xl">
+              Auction online
+            </h2>
+            <p class="mt-4 text-xl text-gray-500">
+              A large selection of products for everyones eyes. Every election
+              is a sort of advance auction sale of stolen goods.
+            </p>
+          </div>
+          <div>
+            <div class="mt-10">
+              <div
+                aria-hidden="true"
+                class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                <div
+                  class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                  <div class="flex items-center space-x-6 lg:space-x-8">
+                    <div
+                      class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div
+                        class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                          alt=""
+                          class="h-full w-full object-cover object-center" />
                       </div>
-                      <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                          alt=""
+                          class="h-full w-full object-cover object-center" />
                       </div>
-                      <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
+                    </div>
+                    <div
+                      class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                          alt=""
+                          class="h-full w-full object-cover object-center" />
+                      </div>
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                          alt=""
+                          class="h-full w-full object-cover object-center" />
+                      </div>
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                          alt=""
+                          class="h-full w-full object-cover object-center" />
+                      </div>
+                    </div>
+                    <div
+                      class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                          alt=""
+                          class="h-full w-full object-cover object-center" />
+                      </div>
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                          alt=""
+                          class="h-full w-full object-cover object-center" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <a href="#" class="inline-block rounded-sm border border-transparent bg-mainBlue py-2 px-4 text-center font-medium text-white hover:bg-white hover:text-mainBlue shadow-lg">See All Products</a>
               </div>
+              <a
+                href="#"
+                class="inline-block rounded-sm border border-transparent bg-mainBlue py-2 px-4 text-center font-medium text-white hover:bg-white hover:text-mainBlue shadow-lg"
+                >See All Products</a
+              >
             </div>
           </div>
         </div>
       </div>
- <!--  NIKE AIR CARD Product -->
-    <div class="flex justify-center m-8 bg-primary/75 transparent bg-gradient-to-t from-white/95 to-white/25 shadow-sm ">
+    </div>
+    <!--  NIKE AIR CARD Product -->
+    <div
+      class="flex justify-center m-8 bg-primary/75 transparent bg-gradient-to-t from-white/95 to-white/25 shadow-sm">
       <h3 class="text-3xl p-2 font-normal">Lates Products</h3>
     </div>
-  <!-- FIXME: Lates Products and interset the API call -->
+    <!-- FIXME: Lates Products and interset the API call -->
     <section class="flex flex-wrap justify-center gap-4 m-14">
-    <div class="max-w-xs overflow-hidden bg-white rounded-md shadow-lg dark:bg-gray-800">
-      <div class="px-4 py-2">
-          <h5 class="text-3xl py-2 font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h5>
-          <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-          <p class="mt-1 text-sm font-serif text-gray-600 dark:text-gray-400">10.02.2012</p>
-      </div>
-  
-      <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-  
-      <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
+      <div
+        class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
+        <div class="px-4 py-2">
+          <h5
+            class="text-3xl py-2 font-bold text-gray-800 uppercase ">
+            Golden lamp
+          </h5>
+          <p class="mt-1 text-sm text-gray-800">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
+            quidem sequi illum facere recusandae voluptatibus
+          </p>
+          <p class="mt-1 text-sm font-serif text-gray-600 ">
+            10.02.2012
+          </p>
+        </div>
+        <img
+          class="object-cover w-full h-48 mt-2"
+          src="./golden-lamp.jpg"
+          alt="NIKE AIR" />
+        <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
           <h6 class="text-lg font-bold text-white">$129</h6>
-          <button class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">Go To Bid</button>
+          <button
+            class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">
+            Go To Bid
+          </button>
+        </div>
       </div>
-  </div>
-  <!-- TODO: Delete static card -->
-  <div class="max-w-xs overflow-hidden bg-white rounded-md shadow-lg dark:bg-gray-800">
-    <div class="px-4 py-2">
-        <h5 class="text-3xl py-2 font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h5>
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-        <p class="mt-1 text-sm font-serif text-gray-600 dark:text-gray-400">10.02.2012</p>
-    </div>
-
-    <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-
-    <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
+      <!-- TODO: Delete static card -->
+      <div
+      class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
+      <div class="px-4 py-2">
+        <h5
+          class="text-3xl py-2 font-bold text-gray-800 uppercase ">
+          Golden lamp
+        </h5>
+        <p class="mt-1 text-sm text-gray-800">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
+          quidem sequi illum facere recusandae voluptatibus
+        </p>
+        <p class="mt-1 text-sm font-serif text-gray-600 ">
+          10.02.2012
+        </p>
+      </div>
+      <img
+        class="object-cover w-full h-48 mt-2"
+        src="./golden-lamp.jpg"
+        alt="NIKE AIR" />
+      <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
         <h6 class="text-lg font-bold text-white">$129</h6>
-        <button class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">Go To Bid</button>
+        <button
+          class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">
+          Go To Bid
+        </button>
+      </div>
     </div>
-</div>
-<div class="max-w-xs overflow-hidden bg-white rounded-md shadow-lg dark:bg-gray-800">
-  <div class="px-4 py-2">
-      <h5 class="text-3xl py-2 font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h5>
-      <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-      <p class="mt-1 text-sm font-serif text-gray-600 dark:text-gray-400">10.02.2012</p>
-  </div>
-
-  <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-
-  <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
+    <div
+    class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
+    <div class="px-4 py-2">
+      <h5
+        class="text-3xl py-2 font-bold text-gray-800 uppercase ">
+        Golden lamp
+      </h5>
+      <p class="mt-1 text-sm text-gray-800">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
+        quidem sequi illum facere recusandae voluptatibus
+      </p>
+      <p class="mt-1 text-sm font-serif text-gray-600 ">
+        10.02.2012
+      </p>
+    </div>
+    <img
+      class="object-cover w-full h-48 mt-2"
+      src="./golden-lamp.jpg"
+      alt="NIKE AIR" />
+    <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
       <h6 class="text-lg font-bold text-white">$129</h6>
-      <button class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">Go To Bid</button>
+      <button
+        class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">
+        Go To Bid
+      </button>
+    </div>
   </div>
-</div>
-  </section>
+    </section>
     <!-- News letter section -->
     <section class="bg-primary my-2">
       <div class="p-8 md:p-12 lg:px-16 lg:py-24">
         <div class="mx-auto max-w-lg text-center">
-          <h1 class="text-2xl capitalize font-bold text-white md:text-3xl">
+          <h1 class="text-2xl capitalize font-bold text-mainBlue md:text-3xl">
             Get our lates porducts
           </h1>
-          <p class="hidden text-white sm:mt-4 sm:block">
+          <p class="hidden text-gray-600 sm:mt-4 sm:block">
             Get the latest news about our new and exciting products in your
             email
           </p>
@@ -272,51 +352,51 @@
         <div class="text-center">
           <a
             href="#"
-            class="text-3xl font-bold text-white dark:text-white hover:text-mainBlue dark:hover:text-gray-300"
+            class="text-3xl font-bold text-white dark:text-white hover:text-mainBlue "
             >WBid</a
           >
           <div class="flex flex-wrap justify-center mt-5 -mx-4">
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue dark:text-gray-300 dark:hover:text-blue-400"
+              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue "
               aria-label="Reddit">
               Home
             </a>
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+              class="mx-4 text-white transition-colors duration-300 hover:text-blue-500 "
               aria-label="Reddit">
               About
             </a>
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue dark:text-gray-300 dark:hover:text-blue-400"
+              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue "
               aria-label="Reddit">
               Teams
             </a>
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue dark:text-gray-300 dark:hover:text-blue-400"
+              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue"
               aria-label="Reddit">
               Privacy
             </a>
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue dark:text-gray-300 dark:hover:text-blue-400"
+              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue"
               aria-label="Reddit">
               Cookies
             </a>
           </div>
         </div>
-        <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
+        <hr class="my-6 border-gray-200 md:my-10 " />
         <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-          <p class="text-white dark:text-gray-300">
+          <p class="text-white ">
             © Copyright 2021. All Rights Reserved.
           </p>
           <div class="flex -mx-2">
             <a
               href="#"
-              class="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              class="mx-2 text-white transition-colors duration-300 hover:text-blue-500"
               aria-label="Reddit">
               <svg
                 class="w-5 h-5 fill-current"
@@ -329,7 +409,7 @@
             </a>
             <a
               href="#"
-              class="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              class="mx-2 text-white transition-colors duration-300 hover:text-blue-500 "
               aria-label="Facebook">
               <svg
                 class="w-5 h-5 fill-current"
@@ -342,7 +422,7 @@
             </a>
             <a
               href="#"
-              class="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              class="mx-2 text-white transition-colors duration-300 hover:text-blue-500 "
               aria-label="Github">
               <svg
                 class="w-5 h-5 fill-current"
