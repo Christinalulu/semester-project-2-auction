@@ -2,29 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Zen+Dots&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./js/login.js" defer></script>
     <script type="module" src="./js/main.js" defer></script>
     <title>WBid</title>
   </head>
-  <body>
+  <body class="h-full">
     <!-- Start here -->
-
+    <div
+      class="absolute min-h-screen -z-20 bg-cover bg-center bg-no-repeat h-screen min-w-full"
+      style="background-image: url('/bg-register.jpg')"></div>
     <!-- Nav bar starts here -->
-    <nav class="relative bg-primary shadow ">
-      <div class="container px-6 py-3 mx-auto">
+    <!-- Nav bar starts here hidden nav bar-->
+    <nav class="relative bg-primary/70 shadow font-poppins ">
+      <div class="container px-6 py-3 mx-auto ">
         <div
-          class="flex flex-col md:flex-row md:justify-between md:items-center">
+          class="flex flex-col md:flex-row md:justify-between md:items-center ">
           <div class="flex items-center justify-between">
             <div class="flex items-center text-white">
               <a
                 class="text-2xl font-light text-white hover:text-darkerBlue"
-                href="index.html"
-                >WBid
+                href="index.html">
+                WBid
               </a>
             </div>
-            <div class="flex md:hidden">
+            <div class="hidden">
               <button
                 id="toggel-btn-menu"
                 type="button"
@@ -47,7 +57,7 @@
           </div>
           <div
             id="mobile-menu"
-            class="absolute font-light inset-x-0 z-20 w-full px-6 py-2 transform hidden md:translate-y-0 duration-300 ease-in-out bg-primary text-white top-16 md:bg-transparent md:top-0 md:w-auto md:opacity-100 md:translate-x-0 md:flex md:flex-end md:items-center">
+            class=" hidden md:hidden lg:hidden font-light inset-x-0 z-20 w-full px-6 py-2 transform md:translate-y-0 duration-300 ease-in-out bg-primary text-white top-16 md:bg-transparent md:top-0 md:w-auto md:opacity-100 md:translate-x-0 md:flex-end md:items-center">
             <div
               class="flex flex-col mb-2 md:flex-row md:flex-end md:m-auto md:mr-0">
               <a
@@ -73,11 +83,11 @@
             </div>
             <div class="flex justify-between md:justify-around">
               <button
-                class="bg-mainBlue focus:none p-2 px-4 text-white rounded-sm md:mr-2 hover:bg-white hover:text-mainBlue">
+                class="bg-mainBlue focus:none p-2 px-8 text-white hover:bg-white hover:text-mainBlue rounded-sm md:mr-2">
                 Sign Up
               </button>
               <button
-                class="bg-mainBlue focus:none p-2 px-4 text-white rounded-sm md:mr-2 hover:bg-white hover:text-mainBlue">
+                class="bg-mainBlue focus:none p-2 px-8 text-white hover:bg-white hover:text-mainBlue rounded-sm md:mr-2">
                 LogIn
               </button>
             </div>
@@ -86,223 +96,175 @@
       </div>
     </nav>
     <!-- Nav bar End here -->
-    <!-- Second nav bar for search -->
-   
-      <header aria-label="Page Header" class=" bg-primary/100 transparent bg-gradient-to-t from-white/75 to-white/45 flex flex-col">
-        <h1 class="text-2xl text-white font-light p-8 flex justify-start">All Products</h1>
-        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8 flex">
-          
-          <div class="flex justify-around mr-2 lg:mr-16 gap-4">
-            <div class="relative">
-              <label class="sr-only" for="search"> Search </label>
-              <input
-                class="h-10 w-full rounded-lg border-none bg-white pl-4 pr-10 text-sm shadow-sm sm:w-56"
-                id="search"
-                type="search"
-                placeholder="Search Products..."
-              />
-              <button
-                type="button"
-                class="absolute top-1/2 right-1 -translate-y-1/2 rounded-md bg-gray-50 p-2 text-gray-600 transition hover:text-gray-700">
-                <span class="sr-only">Submut Search</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <!-- Dropdown here -->
-          <div class="inline-flex items-stretch rounded-md border bg-white  right-4">
-            <a
-              href="/edit"
-              class="rounded-l-md px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-700"
-            >
-              Tags
-            </a>
-          
-            <div class="relative">
-              <button
-              id="dropdown-btn"
-                type="button"
-                class="inline-flex h-full items-center justify-center rounded-r-md border-l border-gray-100 px-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700"
-              >
-                <span class="sr-only">Menu</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </button>
-          
-              <div
-              id="dropdown-menu"
-                class="absolute right-0 hidden mt-2 overflow-hidden w-56 origin-top-right  rounded-md  border-gray-100 bg-white shadow-lg"
-                role="menu"
-              >
-                <div class=" py-2 overflow-hidden ">
 
-                  <div class="-my-2 divide-y divide-gray-100">
-                    <div class="p-2 ">
-                      <strong
-                        class="block p-2 text-xs font-medium uppercase text-gray-400"
-                      >
-                        General
-                      </strong>
-          
-                      <a
-                        href="#"
-                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                        role="menuitem"
-                      >
-                        View on Storefront
-                      </a>
-                      
-                      <a
-                        href="#"
-                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                        role="menuitem"
-                      >
-                        View on Storefront
-                      </a>
-                    </div>
+    <!-- Login form -->
+    <section class=" min-h-fit ">
+      <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-lg">
+          <form id="login-form" class=" space-y-6  rounded-lg md:rounded-full p-8 bg-white/30 shadow-2xl ">
+            <h1 class="text-center text-4xl font-zenDots text-black">
+             Sign Up
+               </h1>
+           
+               <p class="mx-auto max-w-md text-center text-grey-900 text-2xl" >
+               Welcome
+               </p>
+               <div>
+                <label for="Username" class="text-sm font-medium">Username</label>
+                <div class="relative mt-1">
+                  <input
+                    type="text"
+                    id="username"
+                    class="w-full rounded-lg p-4 pr-12 text-sm shadow-sm"
+                    placeholder="Enter Username"
+                  />
+                  <span class="absolute inset-y-0 right-4 text-gray-400 inline-flex items-center">
+                    <i class="fa-regular fa-user"></i>
+                  </span>
+                  <span id="password-error" class=" hidden text-red-600">Name not found</span>
+                </div>
+              </div>
+            <div>
+              <label for="email" class="text-sm font-medium">Email</label>
+              <div class="relative mt-1">
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                  placeholder="Enter email"
+                />
+                <span class="absolute inset-y-0 right-4 inline-flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                    />
+                  </svg>
+                </span>
+                <span id="email-error" class=" hidden text-red-600">The email must have @stud.noroff.no</span>
+              </div>
             </div>
-          </div>
-        </div>  
-      </header>
       
-   
+            <div>
+              <label for="password" class="text-sm font-medium">Password</label>
+      
+              <div class="relative mt-1">
+                <input
+                  type="password"
+                  id="password"
+                  class="w-full rounded-lg p-4 pr-12 text-sm shadow-sm"
+                  placeholder="Enter password"
+                />
+                <span class="absolute inset-y-0 right-4 inline-flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </span>
+                <span id="password-error" class=" hidden text-red-600">The password must have 8 character</span>
+              </div>
+            </div>
+            <div>
+              <label for="Confirm password" class="text-sm font-medium">Confirm Password</label>
+      
+              <div class="relative mt-1">
+                <input
+                  type="password"
+                  id="confirm-password"
+                  class="w-full rounded-lg p-4 pr-12 text-sm shadow-sm"
+                  placeholder="Confirm password"
+                />
+                <span class="absolute inset-y-0 right-4 inline-flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </span>
+                <span id="password-error" class=" hidden text-red-600">Password not matching</span>
+              </div>
+            </div>
 
-    <!-- Second nav bar for search End -->
-<!-- Product card srat here FIXME: cover to json API -->
-<section class="flex flex-wrap justify-center gap-4 m-14">
-  <div
-    class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
-    <div class="px-4 py-2">
-      <h5
-        class="text-3xl py-2 font-bold text-gray-800 uppercase ">
-        Golden lamp
-      </h5>
-      <p class="mt-1 text-sm text-gray-800">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
-        quidem sequi illum facere recusandae voluptatibus
-      </p>
-      <p class="mt-1 text-sm font-serif text-gray-600 ">
-        10.02.2012
-      </p>
-    </div>
-    <img
-      class="object-cover w-full h-48 mt-2"
-      src="./golden-lamp.jpg"
-      alt="NIKE AIR" />
-    <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
-      <h6 class="text-lg font-bold text-white">$129</h6>
-      <button
-        class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">
-        Go To Bid
-      </button>
-    </div>
-  </div>
-  <!-- TODO: Delete static card -->
-  <div
-  class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
-  <div class="px-4 py-2">
-    <h5
-      class="text-3xl py-2 font-bold text-gray-800 uppercase ">
-      Golden lamp
-    </h5>
-    <p class="mt-1 text-sm text-gray-800">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
-      quidem sequi illum facere recusandae voluptatibus
-    </p>
-    <p class="mt-1 text-sm font-serif text-gray-600 ">
-      10.02.2012
-    </p>
-  </div>
-  <img
-    class="object-cover w-full h-48 mt-2"
-    src="./golden-lamp.jpg"
-    alt="NIKE AIR" />
-  <div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
-    <h6 class="text-lg font-bold text-white">$129</h6>
-    <button
-      class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">
-      Go To Bid
-    </button>
-  </div>
-</div>
-<div
-class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
-<div class="px-4 py-2">
-  <h5
-    class="text-3xl py-2 font-bold text-gray-800 uppercase ">
-    Golden lamp
-  </h5>
-  <p class="mt-1 text-sm text-gray-800">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
-    quidem sequi illum facere recusandae voluptatibus
-  </p>
-  <p class="mt-1 text-sm font-serif text-gray-600 ">
-    10.02.2012
-  </p>
-</div>
-<img
-  class="object-cover w-full h-48 mt-2"
-  src="./golden-lamp.jpg"
-  alt="NIKE AIR" />
-<div class="flex items-center justify-between px-4 py-4 bg-darkerBlue">
-  <h6 class="text-lg font-bold text-white">$129</h6>
-  <button
-    class="px-4 py-2 text-xs font-semibold text-mainBlue uppercase transition-colors duration-300 transform bg-white hover:bg-mainBlue hover:text-white shadow-lg">
-    Go To Bid
-  </button>
-</div>
-</div>
-</section>
-
+            <button
+              type="submit"
+              class=" w-1/2 m-auto flex justify-center rounded-lg bg-mainBlue px-5 py-3 text-sm font-medium text-white hover:bg-white hover:text-mainBlue"
+            >
+              Register
+            </button>
+            <p class="text-center text-sm text-grey-900">
+              Or have an account Login Here!
+              <a class="underline hover:text-white" href="">Login</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Login form -->
 
     <!-- footer start -->
-    <footer class="bg-primary">
+    <footer class="bg-primary/75 ">
       <div class="container px-6 py-8 mx-auto">
         <div class="text-center">
           <a
             href="#"
-            class="text-3xl font-bold text-white dark:text-white hover:text-mainBlue "
+            class="text-3xl font-bold text-white dark:text-white hover:text-mainBlue"
             >WBid</a
           >
           <div class="flex flex-wrap justify-center mt-5 -mx-4">
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue "
+              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue"
               aria-label="Reddit">
               Home
             </a>
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-blue-500 "
+              class="mx-4 text-white transition-colors duration-300 hover:text-blue-500"
               aria-label="Reddit">
               About
             </a>
             <a
               href="#"
-              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue "
+              class="mx-4 text-white transition-colors duration-300 hover:text-mainBlue"
               aria-label="Reddit">
               Teams
             </a>
@@ -320,11 +282,9 @@ class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
             </a>
           </div>
         </div>
-        <hr class="my-6 border-gray-200 md:my-10 " />
+        <hr class="my-6 border-gray-200 md:my-10" />
         <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-          <p class="text-white ">
-            © Copyright 2021. All Rights Reserved.
-          </p>
+          <p class="text-white">© Copyright 2021. All Rights Reserved.</p>
           <div class="flex -mx-2">
             <a
               href="#"
@@ -341,7 +301,7 @@ class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
             </a>
             <a
               href="#"
-              class="mx-2 text-white transition-colors duration-300 hover:text-blue-500 "
+              class="mx-2 text-white transition-colors duration-300 hover:text-blue-500"
               aria-label="Facebook">
               <svg
                 class="w-5 h-5 fill-current"
@@ -354,7 +314,7 @@ class="max-w-xs overflow-hidden  rounded-md shadow-lg bg-white">
             </a>
             <a
               href="#"
-              class="mx-2 text-white transition-colors duration-300 hover:text-blue-500 "
+              class="mx-2 text-white transition-colors duration-300 hover:text-blue-500"
               aria-label="Github">
               <svg
                 class="w-5 h-5 fill-current"
