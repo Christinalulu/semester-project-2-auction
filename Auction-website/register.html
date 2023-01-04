@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./js/login.js" defer></script>
+    <script type="module" src="./js/register.js" defer></script>
     <script type="module" src="./js/main.js" defer></script>
     <title>WBid</title>
   </head>
@@ -101,7 +101,7 @@
     <section class=" min-h-fit ">
       <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-lg">
-          <form id="login-form" class=" space-y-6  rounded-lg md:rounded-full p-8 bg-white/30 shadow-2xl ">
+          <form id="register-from" class=" space-y-6  rounded-lg md:rounded-full p-8 bg-white/30 shadow-2xl ">
             <h1 class="text-center text-4xl font-zenDots text-black">
              Sign Up
                </h1>
@@ -121,7 +121,7 @@
                   <span class="absolute inset-y-0 right-4 text-gray-400 inline-flex items-center">
                     <i class="fa-regular fa-user"></i>
                   </span>
-                  <span id="password-error" class=" hidden text-red-600">Name not found</span>
+                  <span id="username-error" class=" hidden text-red-600">Username (Required)</span>
                 </div>
               </div>
             <div>
@@ -149,7 +149,7 @@
                     />
                   </svg>
                 </span>
-                <span id="email-error" class=" hidden text-red-600">The email must have @stud.noroff.no</span>
+                <span id="email-error" class=" hidden text-red-600">The email must have @stud.noroff.no (Required)</span>
               </div>
             </div>
       
@@ -185,7 +185,7 @@
                     />
                   </svg>
                 </span>
-                <span id="password-error" class=" hidden text-red-600">The password must have 8 character</span>
+                <span id="password-error" class=" hidden text-red-600">The password must have 8 character (Required)</span>
               </div>
             </div>
             <div>
@@ -220,7 +220,8 @@
                     />
                   </svg>
                 </span>
-                <span id="password-error" class=" hidden text-red-600">Password not matching</span>
+                <span id="password-confirm-error" class=" hidden text-red-600">Password (Required)</span>
+                <span id="password-match-error" class=" hidden text-red-600">Password not matching</span>
               </div>
             </div>
 
