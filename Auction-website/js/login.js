@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-=======
 import { validateEmail} from "./utils/validation";
 
 
@@ -50,12 +45,10 @@ loginForm.addEventListener('submit', e => {
       }
       console.log(userData , "UserData");
     }
-    // TODO: Make the Api call here
-    // fetch and login user
+  
 
 })
 
->>>>>>> 5ca6297c1e9065bcffcdc7a2ef076be7c3c025e6
 
 
 
