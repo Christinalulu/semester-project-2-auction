@@ -1,3 +1,24 @@
+
+
+import { validateEmail} from "./utils/validation";
+
+
+const loginForm = document.getElementById('login-form')
+const email = document.getElementById("email")
+const emailError = document.getElementById("email-error")
+const emailErrorValid = document.getElementById("email-error-valid")
+const password = document.getElementById("password")
+const passwordError = document.getElementById("password-error")
+
+
+
+loginForm.addEventListener('submit', e => {
+   e.preventDefault();
+
+   let isEmail = false;
+   if(email.value.trim().length > 0){
+      emailError.classList.add('hidden');
+
 import { validEmail } from "./utils/validation";
 import { LOGIN_URL } from "./settings/api";
 import { saveToken, saveUser } from "./settings/storage";
@@ -17,6 +38,7 @@ if (loginForm) {
     let isEmail = false;
     if (loginEmail.value.trim().length > 0) {
       loginEmailErr.classList.add("hidden");
+
       isEmail = true;
     } else {
       loginEmailErr.classList.remove("hidden");
@@ -37,6 +59,7 @@ if (loginForm) {
         loginEmailValid.classList.remove("hidden");
       }
     }
+
 
     let isPassword = false;
     if (password.value.trim().length >= 8) {
