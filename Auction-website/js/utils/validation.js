@@ -1,22 +1,25 @@
-function validateEmail(email) {
-   const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(stud.noroff.no)$/;
-   return email.match(regEx) ? true : false;
+
+
+
+
+
+function validEmail(email) {
+    const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(stud.noroff.no)$/;
+    return !!email.match(regEx);
 }
 
-function validatePassword(password, passwordConfrim) {
-
+function validPassword(password, confirmPassword) {
    if (!password) {
        return false;
    }
-   if (!passwordConfrim) {
+   if (!confirmPassword) {
        return false;
    }
-   if (password !== passwordConfrim) {
+   if (password !== confirmPassword) {
        return false;
    } else {
        return true;
    }
 }
 
-
-export{validateEmail, validatePassword};
+export{validEmail, validPassword};
