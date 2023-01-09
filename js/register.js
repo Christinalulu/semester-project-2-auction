@@ -1,5 +1,6 @@
 import { validEmail, validPassword,validImgUrl,checkLength } from "./utils/validation";
 import{REGISTER_URL} from "./settings/api";
+
 const registerFrom = document.getElementById("register-from");
 const username = document.getElementById("username");
 const usernameError = document.getElementById("username-error");
@@ -13,6 +14,7 @@ const passwordMatching = document.getElementById("password-match-error");
 const registerErrMessage = document.getElementById("general-message");
 const avatar = document.getElementById("avatar");
 const avatarError = document.getElementById("avatar-error");
+
 async function registerUser(url, data){
    try{
       const response = await fetch(REGISTER_URL,{
