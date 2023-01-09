@@ -8,18 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Zen+Dots&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="icon" href="/letter-w.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./js/register.js" defer></script>
-    <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/login.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <title>WBid</title>
   </head>
   <body class="h-full">
     <!-- Start here -->
-    <div class="absolute h-screen -z-20 bg-cover bg-center bg-no-repeat w-full">
-      <img src="./public/bg-register.jpg" alt="background image">
-    </div>
+    <div
+      class="absolute min-h-screen -z-20 bg-cover bg-center bg-no-repeat h-screen min-w-full"
+      style="background-image: url('/bg-register.jpg')"></div>
     <!-- Nav bar starts here -->
     <!-- Nav bar starts here hidden nav bar-->
     <nav class="relative bg-primary/70 shadow font-poppins ">
@@ -101,28 +99,14 @@
     <section class=" min-h-fit ">
       <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-lg">
-          <form id="register-from" class=" space-y-6  rounded-lg  p-8 bg-white/30 shadow-2xl ">
+          <form id="login-form" class=" space-y-6  rounded-lg p-8 bg-white/30 shadow-2xl ">
             <h1 class="text-center text-4xl font-zenDots text-black">
-             Sign Up
+              LogIn
                </h1>
+           
                <p class="mx-auto max-w-md text-center text-grey-900 text-2xl" >
-               Welcome
+                 Hello WBid Usere
                </p>
-               <div>
-                <label for="Username" class="text-sm font-medium">Username</label>
-                <div class="relative mt-1">
-                  <input
-                    type="text"
-                    id="username"
-                    class="w-full rounded-lg p-4 pr-12 text-sm shadow-sm"
-                    placeholder="Enter Username"
-                  />
-                  <span class="absolute inset-y-0 right-4 text-gray-400 inline-flex items-center">
-                    <i class="fa-regular fa-user"></i>
-                  </span>
-                  <span id="username-error" class=" hidden text-red-600">Username (Required)</span>
-                </div>
-              </div>
             <div>
               <label for="email" class="text-sm font-medium">Email</label>
               <div class="relative mt-1">
@@ -148,27 +132,14 @@
                     />
                   </svg>
                 </span>
-                <span id="email-error" class=" hidden text-red-600">The email must have @stud.noroff.no (Required)</span>
-              </div>
-            </div>
-            <div>
-              <label for="avatar" class="text-sm font-medium">Image Url(Optional can change later)</label>
-              <div class="relative mt-1">
-                <input
-                  type="text"
-                  id="avatar"
-                  class="w-full rounded-lg p-4 pr-12 text-sm shadow-sm"
-                  placeholder="Image Url"
-                />
-                <span class="absolute inset-y-0 right-4 text-gray-400 inline-flex items-center">
-                  <i class="fa-regular fa-image"></i>
-                </span>
-                <span id="avatar-error" class=" hidden text-red-600">Sorry the url is not valid</span>
+                <span id="email-error" class=" hidden text-red-600">Email is (Required)</span>
+                <span id="email-error-valid" class=" hidden text-red-600">The email must have @stud.noroff.no</span>
               </div>
             </div>
       
             <div>
               <label for="password" class="text-sm font-medium">Password</label>
+      
               <div class="relative mt-1">
                 <input
                   type="password"
@@ -198,58 +169,21 @@
                     />
                   </svg>
                 </span>
-                <span id="password-error" class=" hidden text-red-600">The password must have 8 character (Required)</span>
+                <span id="password-error" class=" hidden text-red-600">The password must have 8 character</span>
               </div>
             </div>
-            <div>
-              <label for="Confirm password" class="text-sm font-medium">Confirm Password</label>
-              <div class="relative mt-1">
-                <input
-                  type="password"
-                  id="confirm-password"
-                  class="w-full rounded-lg p-4 pr-12 text-sm shadow-sm"
-                  placeholder="Confirm password"
-                />
-                <span class="absolute inset-y-0 right-4 inline-flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                    />
-                  </svg>
-                </span>
-                <span id="password-confirm-error" class=" hidden text-red-600">Password (Required)</span>
-                <span id="password-match-error" class=" hidden text-red-600">Password not matching</span>
-              </div>
-            </div>
-
             <button
               type="submit"
               class=" w-1/2 m-auto flex justify-center rounded-lg bg-mainBlue px-5 py-3 text-sm font-medium text-white hover:bg-white hover:text-mainBlue"
             >
-              Register
+              Sign in
             </button>
             <p class="text-center text-sm text-grey-900">
-              Or have an account Login Here!
-              <a class="underline hover:text-white" href="/login.html">Login</a>
+              Or don’t have an account Sign Up Here!
+              <a class="underline hover:text-white" href="">Sign up</a>
             </p>
             <div class=" text-red-700" id="general-message"></div>
           </form>
-         
         </div>
       </div>
     </section>
@@ -349,6 +283,3 @@
     <!-- End here -->
   </body>
 </html>
-
-
-

@@ -1,13 +1,8 @@
 
-
-
-
-
 function validEmail(email) {
     const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(stud.noroff.no)$/;
     return !!email.match(regEx);
 }
-
 function validPassword(password, confirmPassword) {
    if (!password) {
        return false;
@@ -21,5 +16,19 @@ function validPassword(password, confirmPassword) {
        return true;
    }
 }
+const validImgUrl = (url) => {
+    const urlPattern =
+      /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-]))?/;
+    if (typeof url === 'object') {
+      return urlPattern.test(url.value);
+    }
+    return urlPattern.test(url);
+  };
 
-export{validEmail, validPassword};
+  const checkLength = (value, len) => {
+    if (value.trim().length >= len) {
+      return true;
+    }
+    return false;
+  };
+export{validEmail, validPassword, validImgUrl,checkLength};
