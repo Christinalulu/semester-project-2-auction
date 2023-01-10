@@ -9,10 +9,14 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script type="module" src="./js/profile.js" defer></script>
     <script type="module" src="./js/main.js" defer></script>
+
     <title>WBid</title>
   </head>
   <body class="h-full min-h-screen">
+
     <nav class="relative bg-primary shadow">
       <div class="container px-6 py-3 mx-auto">
         <div
@@ -48,7 +52,7 @@
           </div>
           <div
             id="mobile-menu"
-            class="absolute font-light inset-x-0 z-20 w-full px-6 py-2 transform hidden md:translate-y-0 duration-300 ease-in-out bg-primary text-white top-16 md:bg-transparent md:top-0 md:w-auto md:opacity-100 md:translate-x-0 md:flex md:flex-end md:items-center">
+            class="absolute font-light inset-x-0 z-1000 w-full px-6 py-2 transform hidden md:translate-y-0 duration-300 ease-in-out bg-primary text-white top-16 md:bg-transparent md:top-0 md:w-auto md:opacity-100 md:translate-x-0 md:flex md:flex-end md:items-center">
             <div
               class="flex flex-col mb-2 md:flex-row md:flex-end md:m-auto md:mr-0">
               <a
@@ -84,10 +88,23 @@
             </div>
           </div>
         </div>
+
+        <!-- Log in user and creids in navBar -->
+
+        <div class=" container flex flex-end" id="">
+          <div id="user-container" class="flex flex-end">
+            <div id="credit-user">Credit 800$</div>
+            <div id="avatar">Avatar</div>
+            <div id="sign-out-btn">Logout</div>
+          </div>
+        </div>
+    
       </div>
     </nav>
+
+
     <!-- Profile Content -->
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-white ">
       <div class="max-w-6xl px-6 py-10 mx-auto">
 
         <h1

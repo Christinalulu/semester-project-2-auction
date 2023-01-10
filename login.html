@@ -7,24 +7,17 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Zen+Dots&display=swap"
       rel="stylesheet" />
-      <link rel="icon" href="/letter-w.png">
+    <link rel="icon" href="/letter-w.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./js/login.js" defer></script>
-    <script type="module" src="./js/index.js" defer></script>
-    <script type="module" src="./js/settings/storage.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <title>WBid</title>
   </head>
-  <body class="h-full">
-    <!-- Start here -->
-    <div
-      class="absolute min-h-screen -z-20 bg-cover bg-center bg-no-repeat h-screen min-w-full"
-      style="background-image: url('/bg-register.jpg')"></div>
-    <!-- Nav bar starts here -->
-    <!-- Nav bar starts here hidden nav bar-->
-    <nav class="relative bg-primary/70 shadow font-poppins ">
-      <div class="container px-6 py-3 mx-auto ">
+  <body class="bg-mainBackground bg-cover bg-no-repeat h-screen bg-center">
+    <nav class="relative bg-primary/70 shadow font-poppins">
+      <div class="container px-6 py-3 mx-auto">
         <div
-          class="flex flex-col md:flex-row md:justify-between md:items-center ">
+          class="flex flex-col md:flex-row md:justify-between md:items-center">
           <div class="flex items-center justify-between">
             <div class="flex items-center text-white">
               <a
@@ -56,7 +49,7 @@
           </div>
           <div
             id="mobile-menu"
-            class=" hidden md:hidden lg:hidden font-light inset-x-0 z-20 w-full px-6 py-2 transform md:translate-y-0 duration-300 ease-in-out bg-primary text-white top-16 md:bg-transparent md:top-0 md:w-auto md:opacity-100 md:translate-x-0 md:flex-end md:items-center">
+            class="hidden md:hidden lg:hidden font-light inset-x-0 z-20 w-full px-6 py-2 transform md:translate-y-0 duration-300 ease-in-out bg-primary text-white top-16 md:bg-transparent md:top-0 md:w-auto md:opacity-100 md:translate-x-0 md:flex-end md:items-center">
             <div
               class="flex flex-col mb-2 md:flex-row md:flex-end md:m-auto md:mr-0">
               <a
@@ -94,20 +87,16 @@
         </div>
       </div>
     </nav>
-    <!-- Nav bar End here -->
-
-    <!-- Login form -->
-    <section class=" min-h-fit ">
+    <section class="min-h-fit">
       <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-lg">
-          <form id="login-form" class=" space-y-6  rounded-lg p-8 bg-white/30 shadow-2xl ">
-            <h1 class="text-center text-4xl font-zenDots text-black">
-              LogIn
-               </h1>
-           
-               <p class="mx-auto max-w-md text-center text-grey-900 text-2xl" >
-                 Hello WBid Usere
-               </p>
+          <form
+            id="login-form"
+            class="space-y-6 rounded-lg p-8 bg-white/30 shadow-2xl">
+            <h1 class="text-center text-4xl font-zenDots text-black">LogIn</h1>
+            <p class="mx-auto max-w-md text-center text-grey-900 text-2xl">
+              Hello WBid Usere
+            </p>
             <div>
               <label for="email" class="text-sm font-medium">Email</label>
               <div class="relative mt-1">
@@ -115,83 +104,80 @@
                   type="email"
                   id="email"
                   class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
-                  placeholder="Enter email"
-                />
-                <span class="absolute inset-y-0 right-4 inline-flex items-center">
+                  placeholder="Enter email" />
+                <span
+                  class="absolute inset-y-0 right-4 inline-flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                    />
+                      d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                   </svg>
                 </span>
-                <span id="email-error" class=" hidden text-red-600">Email is (Required)</span>
-                <span id="email-error-valid" class=" hidden text-red-600">The email must have @stud.noroff.no</span>
+                <span id="email-error" class="hidden text-red-600"
+                  >Email is (Required)</span
+                >
+                <span id="email-error-valid" class="hidden text-red-600"
+                  >The email must have @stud.noroff.no</span
+                >
               </div>
             </div>
-      
             <div>
               <label for="password" class="text-sm font-medium">Password</label>
-      
               <div class="relative mt-1">
                 <input
                   type="password"
                   id="password"
                   class="w-full rounded-lg p-4 pr-12 text-sm shadow-sm"
-                  placeholder="Enter password"
-                />
-                <span class="absolute inset-y-0 right-4 inline-flex items-center">
+                  placeholder="Enter password" />
+                <span
+                  class="absolute inset-y-0 right-4 inline-flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                    />
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
                 </span>
-                <span id="password-error" class=" hidden text-red-600">The password must have 8 character</span>
+                <span id="password-error" class="hidden text-red-600"
+                  >The password must have 8 character</span
+                >
               </div>
             </div>
             <button
               type="submit"
-              class=" w-1/2 m-auto flex justify-center rounded-lg bg-mainBlue px-5 py-3 text-sm font-medium text-white hover:bg-white hover:text-mainBlue"
-            >
+              class="w-1/2 m-auto flex justify-center rounded-lg bg-mainBlue px-5 py-3 text-sm font-medium text-white hover:bg-white hover:text-mainBlue">
               Sign in
             </button>
             <p class="text-center text-sm text-grey-900">
               Or don’t have an account Sign Up Here!
-              <a class="underline hover:text-white" href="/register.html">Sign up</a>
+              <a class="underline hover:text-white" href="/register.html"
+                >Sign up</a
+              >
             </p>
-            <div class=" text-red-700" id="general-message"></div>
+            <div class="text-red-700" id="general-message"></div>
           </form>
         </div>
       </div>
     </section>
-    <!-- Login form -->
-
-    <!-- footer start -->
-    <footer class="bg-primary/75 ">
+    <footer class="bg-primary/75">
       <div class="container px-6 py-8 mx-auto">
         <div class="text-center">
           <a
@@ -279,8 +265,5 @@
         </div>
       </div>
     </footer>
-    <!-- footer End -->
-
-    <!-- End here -->
   </body>
 </html>

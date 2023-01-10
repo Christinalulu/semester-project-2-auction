@@ -11,6 +11,9 @@ module.exports = {
       fontFamily:{
        poppins:"'poppins',sans-seri",
        zenDots: "'zen Dots', sans-seri"
+      },
+      backgroundImage:{
+        mainBackground: "url('./public/bg-register.jpg')",
       }
       
     },
