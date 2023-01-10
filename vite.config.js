@@ -9,7 +9,6 @@ export default {
             login: resolve(__dirname, 'login.html'),
             products: resolve(__dirname, 'products.html'),
             productInfo: resolve(__dirname, 'productInfo.html'),
-              
            },
        },
    },
